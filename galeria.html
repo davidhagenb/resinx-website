@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Pisos Epoxicos | ResinX Hermosillo</title>
+  <meta name="description" content="Galeria de proyectos de pisos epoxicos en Hermosillo. Residencial, comercial e industrial. Antes y despues de instalaciones con materiales importados.">
+  <link rel="canonical" href="https://resinx.net/galeria.html">
+  <meta property="og:title" content="Galeria de Pisos Epoxicos | ResinX Hermosillo">
+  <meta property="og:description" content="Proyectos completados de pisos epoxicos. Ve el antes y despues de nuestras transformaciones.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://resinx.net/galeria.html">
+  <meta property="og:image" content="https://resinx.net/assets/images/gallery/commercial/restaurant-metallic-01.jpg">
+  <meta property="og:locale" content="es_MX">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav nav--solid" role="navigation" aria-label="Navegacion principal">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo-link" aria-label="ResinX - Inicio">
+        <svg class="nav__logo" viewBox="0 0 400 100" height="36" aria-hidden="true"><text x="20" y="75" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Resin</text><text x="280" y="75" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="72" fill="#3b82f6">X</text><g style="transform-origin: 310px 50px; animation: orbit 4s linear infinite;"><ellipse cx="310" cy="50" rx="55" ry="20" fill="none" stroke="#ef4444" stroke-width="4" transform="rotate(-25, 310, 50)"/></g></svg>
+      </a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="servicios.html" class="nav__link">Servicios</a>
+        <a href="galeria.html" class="nav__link nav__link--active">Galeria</a>
+        <a href="proceso.html" class="nav__link">Proceso</a>
+        <a href="cobertura.html" class="nav__link">Cobertura</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <a href="contacto.html" class="btn btn--primary nav__cta">Cotizacion Gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section section--dark" style="padding-top:calc(var(--nav-height) + var(--space-16));">
+    <div class="container text-center">
+      <span style="font-size:var(--font-sm);letter-spacing:3px;text-transform:uppercase;color:var(--color-blue);">Portafolio</span>
+      <h1 style="color:white;margin-top:var(--space-4);">Galeria de Proyectos</h1>
+      <p style="color:var(--color-gray-300);font-size:var(--font-lg);max-width:600px;margin:var(--space-4) auto 0;">Cada proyecto es una transformacion. Ve nuestro trabajo en Hermosillo y Sonora.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:flex;justify-content:center;gap:var(--space-2);margin-bottom:var(--space-12);flex-wrap:wrap;">
+        <button class="btn btn--primary gallery-filter" data-filter="all">Todos</button>
+        <button class="btn btn--secondary gallery-filter" data-filter="residencial">Residencial</button>
+        <button class="btn btn--secondary gallery-filter" data-filter="comercial">Comercial</button>
+        <button class="btn btn--secondary gallery-filter" data-filter="industrial">Industrial</button>
+      </div>
+      <div class="grid grid--3" id="gallery-grid">
+        <div class="gallery-item" data-category="residencial"><div class="card"><img class="card__image" src="assets/images/gallery/residential/garage-flake-01.jpg" alt="Cochera con piso flake epoxicos gris y azul" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Cochera Residencial</h3><p class="card__text">Piso flake en gris y azul. Acabado antiderrapante y resistente a manchas de aceite.</p></div></div></div>
+        <div class="gallery-item" data-category="residencial"><div class="card"><img class="card__image" src="assets/images/gallery/residential/interior-metallic-01.jpg" alt="Interior residencial con piso metalico epoxicos en tonos cobre y plata" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Interior Metalico</h3><p class="card__text">Piso metalico con patron unico en cobre y plata. Cada diseno es irrepetible.</p></div></div></div>
+        <div class="gallery-item" data-category="residencial"><div class="card"><img class="card__image" src="assets/images/gallery/residential/patio-flake-01.jpg" alt="Patio residencial con piso flake epoxicos en tonos tierra" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Patio Exterior</h3><p class="card__text">Piso flake exterior resistente a UV y condiciones del clima de Sonora.</p></div></div></div>
+        <div class="gallery-item" data-category="residencial"><div class="card"><img class="card__image" src="assets/images/gallery/residential/interior-solid-01.jpg" alt="Cuarto de lavado con piso epoxicos solido gris" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Cuarto de Servicio</h3><p class="card__text">Piso solido autonivelante. Facil de limpiar y mantener en areas de alto uso.</p></div></div></div>
+        <div class="gallery-item" data-category="comercial"><div class="card"><img class="card__image" src="assets/images/gallery/commercial/restaurant-metallic-01.jpg" alt="Restaurante con piso metalico epoxicos en tonos cobre y bronce" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Restaurante Premium</h3><p class="card__text">Piso metalico en cobre y bronce. Resistente a trafico de comensales y facil de limpiar.</p></div></div></div>
+        <div class="gallery-item" data-category="comercial"><div class="card"><img class="card__image" src="assets/images/gallery/commercial/showroom-solid-01.jpg" alt="Showroom de autos con piso epoxicos alto brillo en gris oscuro" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Showroom Automotriz</h3><p class="card__text">Piso solido de alto brillo. Reflejo perfecto que realza el espacio de exhibicion.</p></div></div></div>
+        <div class="gallery-item" data-category="comercial"><div class="card"><img class="card__image" src="assets/images/gallery/commercial/retail-white-01.jpg" alt="Tienda de ropa con piso epoxicos blanco impecable" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Local Comercial</h3><p class="card__text">Piso epoxicos blanco impecable. Limpieza visual que complementa cualquier diseno de interiores.</p></div></div></div>
+        <div class="gallery-item" data-category="comercial"><div class="card"><img class="card__image" src="assets/images/gallery/commercial/office-flake-01.jpg" alt="Lobby de oficinas con piso flake epoxicos profesional" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Oficinas Corporativas</h3><p class="card__text">Piso flake profesional para ambientes corporativos de alta imagen.</p></div></div></div>
+        <div class="gallery-item" data-category="industrial"><div class="card"><img class="card__image" src="assets/images/gallery/industrial/warehouse-01.jpg" alt="Bodega industrial con piso epoxicos de alta resistencia" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Bodega Industrial</h3><p class="card__text">Piso industrial de alta resistencia para trafico pesado y montacargas.</p></div></div></div>
+        <div class="gallery-item" data-category="industrial"><div class="card"><img class="card__image" src="assets/images/gallery/industrial/workshop-01.jpg" alt="Taller mecanico con piso epoxicos resistente a quimicos" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Taller Mecanico</h3><p class="card__text">Piso resistente a aceites, solventes y quimicos. Facil de limpiar y mantener.</p></div></div></div>
+        <div class="gallery-item" data-category="industrial"><div class="card"><img class="card__image" src="assets/images/gallery/industrial/food-facility-01.jpg" alt="Planta de alimentos con piso uretanocementicios blanco" loading="lazy" data-lightbox><div class="card__body"><h3 class="card__title">Planta de Alimentos</h3><p class="card__text">Sistema uretanocementicios con drenaje. Cumple normas sanitarias para procesamiento de alimentos.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__label">Transformaciones</span>
+        <h2 class="section-header__title">Antes y Despues</h2>
+        <p class="section-header__subtitle">Ve la diferencia que hace un sistema epoxicos profesional.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="reveal">
+          <div class="ba-slider" data-before-after>
+            <img class="ba-slider__after" src="assets/images/gallery/before-after/garage-after.jpg" alt="Cochera despues: piso flake epoxicos azul y gris" loading="lazy">
+            <div class="ba-slider__before"><img src="assets/images/gallery/before-after/garage-before.jpg" alt="Cochera antes: concreto danado con manchas" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+            <div class="ba-slider__handle"></div>
+          </div>
+          <p style="text-align:center;margin-top:var(--space-4);font-weight:600;">Cochera Residencial</p>
+        </div>
+        <div class="reveal">
+          <div class="ba-slider" data-before-after>
+            <img class="ba-slider__after" src="assets/images/gallery/before-after/commercial-after.jpg" alt="Local comercial despues: piso metalico epoxicos plata" loading="lazy">
+            <div class="ba-slider__before"><img src="assets/images/gallery/before-after/commercial-before.jpg" alt="Local comercial antes: concreto desgastado con marcas" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+            <div class="ba-slider__handle"></div>
+          </div>
+          <p style="text-align:center;margin-top:var(--space-4);font-weight:600;">Local Comercial</p>
+        </div>
+        <div class="reveal">
+          <div class="ba-slider" data-before-after>
+            <img class="ba-slider__after" src="assets/images/gallery/before-after/industrial-after.jpg" alt="Bodega despues: piso industrial epoxicos gris" loading="lazy">
+            <div class="ba-slider__before"><img src="assets/images/gallery/before-after/industrial-before.jpg" alt="Bodega antes: concreto industrial con desgaste severo" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+            <div class="ba-slider__handle"></div>
+          </div>
+          <p style="text-align:center;margin-top:var(--space-4);font-weight:600;">Bodega Industrial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" style="text-align:center;">
+    <div class="container reveal">
+      <h2 style="color:white;margin-bottom:var(--space-4);">Quieres resultados como estos?</h2>
+      <p style="color:var(--color-gray-300);font-size:var(--font-lg);max-width:550px;margin:0 auto var(--space-8);">Cada proyecto empieza con una evaluacion gratuita de tu espacio.</p>
+      <a href="contacto.html" class="btn btn--primary btn--large">Solicitar Cotizacion Gratis</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><svg viewBox="0 0 400 100" height="32" aria-label="ResinX"><text x="20" y="75" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="72" fill="#ffffff">Resin</text><text x="280" y="75" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="72" fill="#3b82f6">X</text></svg><p class="footer__brand-desc">Pisos epoxicos premium en Hermosillo, Sonora. Materiales importados de EE.UU. con garantia de hasta 3 anos.</p></div>
+        <div><h4 class="footer__heading">Servicios</h4><a href="servicios.html#flake" class="footer__link">Pisos Flake</a><a href="servicios.html#metalico" class="footer__link">Pisos Metalicos</a><a href="servicios.html#industrial" class="footer__link">Industrial</a><a href="servicios.html#3d" class="footer__link">Pisos 3D</a><a href="servicios.html" class="footer__link">Todos los servicios</a></div>
+        <div><h4 class="footer__heading">Empresa</h4><a href="galeria.html" class="footer__link">Galeria</a><a href="proceso.html" class="footer__link">Proceso</a><a href="cobertura.html" class="footer__link">Cobertura</a><a href="contacto.html" class="footer__link">Contacto</a></div>
+        <div><h4 class="footer__heading">Contacto</h4><a href="https://wa.me/{{WHATSAPP_NUMBER}}" class="footer__link" target="_blank" rel="noopener">WhatsApp</a><a href="tel:{{PHONE_NUMBER}}" class="footer__link">Telefono</a><a href="contacto.html" class="footer__link">Formulario</a></div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 ResinX. Todos los derechos reservados. Hermosillo, Sonora, Mexico.</p></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
