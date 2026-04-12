@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <style>
+    @keyframes orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .orbit-ring {
+      transform-origin: 310px 50px;
+      animation: orbit 4s linear infinite;
+    }
+    .logo-text { font-family: 'Inter', Arial, sans-serif; font-weight: 700; font-size: 72px; }
+  </style>
+
+  <text x="20" y="75" class="logo-text" fill="#ffffff">Resin</text>
+  <text x="280" y="75" class="logo-text" fill="#3b82f6">X</text>
+
+  <g class="orbit-ring">
+    <ellipse cx="310" cy="50" rx="55" ry="20" fill="none" stroke="#ef4444" stroke-width="4" transform="rotate(-25, 310, 50)"/>
+  </g>
+</svg>
