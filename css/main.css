@@ -483,8 +483,9 @@ p {
   color: var(--color-slate-lighter);
 }
 
-/* ========== MOBILE OVERRIDES FOR INLINE GRIDS ========== */
+/* ========== COMPREHENSIVE MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
+  /* Inline grid overrides */
   [style*="grid-template-columns: 1fr 1fr"],
   [style*="grid-template-columns:1fr 1fr"] {
     display: grid !important;
@@ -494,5 +495,136 @@ p {
   [style*="order:1"], [style*="order: 1"],
   [style*="order:2"], [style*="order: 2"] {
     order: 0 !important;
+  }
+
+  /* Sections reduced padding */
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: var(--font-3xl) !important;
+  }
+
+  .hero p {
+    font-size: var(--font-base) !important;
+  }
+
+  /* Buttons stack on mobile */
+  [style*="display:flex"][style*="justify-content:center"] {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .btn--large {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Cards full width */
+  .card__image {
+    aspect-ratio: 16/9;
+  }
+
+  /* Section headers */
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Contact form grid */
+  [style*="grid-template-columns:1fr 1fr"][style*="align-items:start"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Trust bar stack */
+  [style*="display:flex"][style*="justify-content:center"][style*="flex-wrap:wrap"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: var(--space-4) !important;
+  }
+
+  /* Process step numbers */
+  .grid--4 {
+    gap: var(--space-6);
+  }
+
+  /* Gallery filters wrap nicely */
+  [style*="display:flex"][style*="justify-content:center"][style*="gap:var(--space-2)"] {
+    gap: var(--space-2) !important;
+  }
+
+  /* Coverage cards */
+  .card[style*="padding:var(--space-8)"] {
+    padding: var(--space-6) !important;
+  }
+
+  /* Contact cards grid */
+  .grid--3 {
+    gap: var(--space-4);
+  }
+
+  /* Footer */
+  .footer {
+    padding: var(--space-12) 0 var(--space-6);
+  }
+
+  .footer__brand-desc {
+    max-width: 100%;
+  }
+
+  /* Inline flex gaps */
+  [style*="gap:var(--space-12)"] {
+    gap: var(--space-6) !important;
+  }
+
+  /* Before/after sliders */
+  .ba-slider {
+    aspect-ratio: 16/10;
+  }
+
+  .ba-slider__after {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Image border radius consistency */
+  [style*="border-radius:var(--radius-lg)"] img {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  h1 { font-size: var(--font-3xl); }
+  h2 { font-size: var(--font-2xl); }
+  h3 { font-size: var(--font-lg); }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .btn {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-sm);
+  }
+
+  .btn--large {
+    padding: var(--space-3) var(--space-8);
+    font-size: var(--font-base);
+  }
+
+  .nav__logo {
+    height: 28px;
+  }
+
+  /* Contact card stack vertical */
+  .contact-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .contact-card__icon {
+    margin: 0 auto;
   }
 }

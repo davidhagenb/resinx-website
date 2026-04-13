@@ -92,7 +92,7 @@
         (mensaje ? '. ' + mensaje : '.')
       );
 
-      var waNumber = '{{WHATSAPP_NUMBER}}';
+      var waNumber = '526623478040';
       if (waNumber.indexOf('{{') === 0) {
         alert('Gracias por tu interes. Nos pondremos en contacto pronto.');
       } else {
