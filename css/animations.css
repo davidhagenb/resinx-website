@@ -1,11 +1,52 @@
-/* ========== LOGO ORBIT ========== */
-@keyframes orbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* ========== LOGO ANIMATION (D3 Cinematic) ========== */
+@keyframes logoDrawRing {
+  0% { stroke-dashoffset: 300; opacity: 0; }
+  60% { stroke-dashoffset: 0; opacity: 0.25; }
+  100% { stroke-dashoffset: 0; opacity: 0.2; }
 }
 
-.logo-orbit {
-  animation: orbit 4s linear infinite;
+@keyframes logoTraceLoop {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -300; }
+}
+
+@keyframes logoTraceIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes logoXGlow {
+  0%, 100% { filter: drop-shadow(0 0 0px rgba(59,130,246,0)); }
+  50% { filter: drop-shadow(0 0 12px rgba(59,130,246,0.6)); }
+}
+
+.logo-ring-base {
+  stroke-dasharray: 300;
+  animation: logoDrawRing 2s ease forwards;
+}
+
+.logo-ring-trace {
+  stroke-dasharray: 45 255;
+  opacity: 0;
+  animation: logoTraceIn 0.5s ease 1.5s forwards, logoTraceLoop 2.5s linear 1.5s infinite;
+  filter: drop-shadow(0 0 10px rgba(239,68,68,1)) drop-shadow(0 0 25px rgba(239,68,68,0.5));
+}
+
+.logo-x-glow {
+  animation: logoXGlow 3s ease-in-out 2s infinite;
+}
+
+/* Navbar logo: skip draw-on, just trace */
+.nav .logo-ring-base {
+  stroke-dasharray: none;
+  animation: none;
+  opacity: 0.2;
+}
+
+.nav .logo-ring-trace {
+  animation: logoTraceLoop 2.5s linear infinite;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(239,68,68,0.9));
 }
 
 /* ========== FADE IN UP ========== */

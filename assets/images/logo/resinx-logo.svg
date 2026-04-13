@@ -1,20 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="340" height="100">
   <style>
-    @keyframes orbit {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes drawRing {
+      0% { stroke-dashoffset: 300; opacity: 0; }
+      60% { stroke-dashoffset: 0; opacity: 0.25; }
+      100% { stroke-dashoffset: 0; opacity: 0.2; }
     }
-    .orbit-ring {
-      transform-origin: 310px 50px;
-      animation: orbit 4s linear infinite;
+    @keyframes traceLoop {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -300; }
+    }
+    @keyframes traceIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes xGlow {
+      0%, 100% { filter: drop-shadow(0 0 0px rgba(59,130,246,0)); }
+      50% { filter: drop-shadow(0 0 12px rgba(59,130,246,0.6)); }
     }
     .logo-text { font-family: 'Inter', Arial, sans-serif; font-weight: 700; font-size: 72px; }
+    .ring-base { stroke-dasharray: 300; animation: drawRing 2s ease forwards; }
+    .ring-trace { stroke-dasharray: 45 255; opacity: 0; animation: traceIn 0.5s ease 1.5s forwards, traceLoop 2.5s linear 1.5s infinite; filter: drop-shadow(0 0 10px rgba(239,68,68,1)) drop-shadow(0 0 25px rgba(239,68,68,0.5)); }
+    .x-glow { animation: xGlow 3s ease-in-out 2s infinite; }
   </style>
 
-  <text x="20" y="75" class="logo-text" fill="#ffffff">Resin</text>
-  <text x="280" y="75" class="logo-text" fill="#3b82f6">X</text>
+  <text x="10" y="75" class="logo-text" fill="#ffffff">Resin</text>
+  <text x="230" y="75" class="logo-text x-glow" fill="#3b82f6">X</text>
 
-  <g class="orbit-ring">
-    <ellipse cx="310" cy="50" rx="55" ry="20" fill="none" stroke="#ef4444" stroke-width="4" transform="rotate(-25, 310, 50)"/>
-  </g>
+  <ellipse class="ring-base" cx="258" cy="50" rx="50" ry="18" fill="none" stroke="#ef4444" stroke-width="3.5" transform="rotate(-25, 258, 50)"/>
+  <ellipse class="ring-trace" cx="258" cy="50" rx="50" ry="18" fill="none" stroke="#ef4444" stroke-width="4.5" transform="rotate(-25, 258, 50)"/>
 </svg>
